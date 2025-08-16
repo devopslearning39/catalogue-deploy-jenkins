@@ -10,7 +10,7 @@ pipeline {
     }
 
     parameters {
-        string(name: 'version', defaultValue: 'Mr Jenkins', description: 'What is the version ?')
+        string(name: 'version', defaultValue: '', description: 'What is the version ?')
     }
 
     stages {
