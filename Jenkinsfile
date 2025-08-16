@@ -20,9 +20,9 @@ pipeline {
     stages {
         stage('Get the version') {
             steps {
-                sh '''
-                    echo "version: $"{params.version}"
-                '''
+                sh """
+                    echo "version: ${params.version}"
+                """
             }
         }
     }
