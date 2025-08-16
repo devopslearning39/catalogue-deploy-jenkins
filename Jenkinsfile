@@ -5,6 +5,11 @@ pipeline {
         }
     }
 
+    // environment { 
+    //     packageVersion = ''
+    //     nexusURL = '172.31.5.95:8081'
+    // }
+
     options {
         ansiColor('xterm')
     }
