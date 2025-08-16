@@ -15,7 +15,7 @@ pipeline {
     }
 
     parameters {
-        string(name: 'version', defaultValue: '', description: 'What is the artifact version?')
+        string(name: 'version', defaultValue: '', description: 'What is the artifact version????')
         string(name: 'environment', defaultValue: 'dev', description: 'What is environment?')
     }
 
@@ -23,7 +23,7 @@ pipeline {
         stage('Print version') {
             steps {
                 sh """
-                    echo "version: version: ${env.packageVersion}"
+                    echo "version: ${params.version}"
                     echo "environment: ${params.environment}"
                 """
             }
