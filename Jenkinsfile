@@ -5,10 +5,6 @@ pipeline {
         }
     }
 
-    environment {
-        PackageVersion = ''
-    }
-
     options {
         ansiColor('xterm')
     }
@@ -21,7 +17,7 @@ pipeline {
         stage('Get the version') {
             steps {
                 sh """
-                    echo "version: ${params.version}"
+                    echo "Deploying catalogue version: ${params.version}"
                 """
             }
         }
