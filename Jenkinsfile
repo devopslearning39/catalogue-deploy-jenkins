@@ -14,10 +14,10 @@ pipeline {
         ansiColor('xterm')
     }
 
-    // parameters {
-    //     string(name: 'version', defaultValue: '', description: 'What is the artifact version?')
-    //     string(name: 'environment', defaultValue: 'dev', description: 'What is environment?')
-    // }
+    parameters {
+        string(name: 'version', defaultValue: '', description: 'What is the artifact version?')
+        string(name: 'environment', defaultValue: 'dev', description: 'What is environment?')
+    }
 
     stages {
         stage('Print version') {
