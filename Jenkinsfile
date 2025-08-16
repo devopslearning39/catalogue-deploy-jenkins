@@ -22,7 +22,7 @@ pipeline {
         stage('Print version') {
             steps {
                 sh """
-                    echo "version: ${params.version}"
+                    echo "${params.version}"
                 """
             }
         }
