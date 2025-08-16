@@ -12,11 +12,16 @@ pipeline {
     options {
         ansiColor('xterm')
     }
+
+    parameters {
+        string(name: 'version', defaultValue: 'Mr Jenkins', description: 'What is the version ?')
+    }
+
     stages {
         stage('Get the version') {
             steps {
                 sh '''
-                    echo "version: ${params.version}"
+                    echo "version: $"{params.version}"
                 '''
             }
         }
