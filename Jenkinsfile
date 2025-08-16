@@ -10,14 +10,14 @@ pipeline {
     }
 
     parameters {
-        string(name: 'version', defaultValue: '', description: 'What is the version ?')
+        string(name: 'version', defaultValue: '', description: 'What is the artifact version?')
     }
 
     stages {
-        stage('Get the version') {
+        stage('Print version') {
             steps {
                 sh """
-                    echo "Deploying catalogue version: ${params.version}"
+                    echo "version: ${params.version}"
                 """
             }
         }
